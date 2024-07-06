@@ -1,0 +1,5 @@
+pyrogram
+motor
+requests
+python-dotenv
+tgcrypto
