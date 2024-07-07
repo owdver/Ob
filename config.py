@@ -11,3 +11,6 @@ DATABASE_URI = os.getenv("DATABASE_URI")
 DATABASE_NAME = os.getenv("DATABASE_NAME")
 ADMINS = os.getenv("ADMINS").split()  # List of admin user IDs or usernames
 CHANNELS = os.getenv("CHANNELS").split()  # List of channel IDs or usernames
+
+# Debugging: Print ADMINS
+print(f"ADMINS: {ADMINS}")
