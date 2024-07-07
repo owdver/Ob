@@ -5,6 +5,16 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+# Log all incoming messages for debugging
+@bot.on_message()
+async def log_all_messages(client, message):
+    logger.info(f"Received a message: {message.text} from {message.from_user.id}")
+
+# Echo handler for testing
+@bot.on_message(filters.text)
+async def echo(client, message):
+    await message.reply(f"Echo: {message.text}")
+
 @bot.on_message(filters.command("index") & filters.user(db.ADMINS))
 async def index_files(client, message):
     logger.info("Received /index command")
