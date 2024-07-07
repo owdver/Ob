@@ -9,8 +9,8 @@ API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
 DATABASE_URI = os.getenv("DATABASE_URI")
 DATABASE_NAME = os.getenv("DATABASE_NAME")
-ADMINS = os.getenv("ADMINS").split()  # List of admin user IDs or usernames
-CHANNELS = os.getenv("CHANNELS").split()  # List of channel IDs or usernames
+ADMINS = os.getenv("ADMINS").split(',')  # Correctly split admin user IDs or usernames
+CHANNELS = os.getenv("CHANNELS").split(',')  # Correctly split channel IDs or usernames
 
 # Debugging: Print ADMINS
 print(f"ADMINS: {ADMINS}")
